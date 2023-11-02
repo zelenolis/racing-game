@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Speedsters</title>
+	<link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<header></header>
+	<section class="main">
+		<div class="main__zero">
+			<h2>Top Score</h2>
+			<table class="scores__table">
+				<tr class="scores__row">
+					<th class="scores__place">1</th>
+					<th class="scores__name">nobody here</th>
+					<th class="scores__scores">000000</th>
+				</tr>
+				<tr class="scores__row">
+					<th class="scores__place">2</th>
+					<th class="scores__name">nobody here</th>
+					<th class="scores__scores">000000</th>
+				</tr>
+				<tr class="scores__row">
+					<th class="scores__place">3</th>
+					<th class="scores__name">nobody here</th>
+					<th class="scores__scores">000000</th>
+				</tr>
+				<tr class="scores__row">
+					<th class="scores__place">4</th>
+					<th class="scores__name">nobody here</th>
+					<th class="scores__scores">000000</th>
+				</tr>
+				<tr class="scores__row">
+					<th class="scores__place">5</th>
+					<th class="scores__name">nobody here</th>
+					<th class="scores__scores">000000</th>
+				</tr>
+				<tr class="scores__row">
+					<th class="scores__place">6</th>
+					<th class="scores__name">nobody here</th>
+					<th class="scores__scores">000000</th>
+				</tr>
+				<tr class="scores__row">
+					<th class="scores__place">7</th>
+					<th class="scores__name">nobody here</th>
+					<th class="scores__scores">000000</th>
+				</tr>
+				<tr class="scores__row">
+					<th class="scores__place">8</th>
+					<th class="scores__name">nobody here</th>
+					<th class="scores__scores">000000</th>
+				</tr>
+				<tr class="scores__row">
+					<th class="scores__place">9</th>
+					<th class="scores__name">nobody here</th>
+					<th class="scores__scores">000000</th>
+				</tr>
+				<tr class="scores__row">
+					<th class="scores__place">10</th>
+					<th class="scores__name">nobody here</th>
+					<th class="scores__scores">000000</th>
+				</tr>
+			</table>
+			<p class="score__back">Main Menu</p>
+		</div>
+		<div class="main__first">
+			<h1>Speedsters</h1>
+			<img class="main__cover" src="assets/cover.png" alt="game cover art">
+			<div class="controls">
+				<p class="score__page">Score</p>
+				<p class="start__game">Play</p>
+				<p class="setings">Settings</p>
+			</div>
+		</div>
+		<div class="main__second">
+			<h2>Settings</h2>
+			<p class="main__choose">Choose your car, racer:</p>
+			<div class="main__cars">
+				<img src="assets/player1.png" alt="car image">
+				<img src="assets/player2.png" alt="car image">
+				<img class="main__car_choosed" src="assets/player3.png" alt="car image">
+				<img src="assets/player4.png" alt="car image">
+				<img src="assets/player5.png" alt="car image">
+			</div>
+			<div class="main__music">
+				<div class="main__music_wrapper">
+					<p>Music</p>
+					<img id="music-menu" class="main__check main__check_hidden" src="assets/check.png" alt='music is on'>
+					<div class="main__music_check"></div>
+				</div>
+				<div class="main__music_wrapper">
+					<p>Sound Effects</p>
+					<img id="effect-menu" class="main__check" src="assets/check.png" alt='sound is on'>
+					<div class="main__effects_check"></div>
+				</div>
+				<div class="volume__input">
+					<p class="volume__header">system volume</p>
+					<input type="range" class="volume" name="volume" min="0" max="100" step="10" value="50">
+					<span class="volume__value">50</span>
+				</div>
+			</div>
+			<p class="main__back">Main Menu</p>
+		</div>
+	</section>
+	<section class="play">
+		<div class="play__wrapper">
+			<div class="play__start play__start_hide">
+				<div class="play__start_info play__start_border">
+					<p>use cursor key <br> to control your car</p>
+					<img src="assets/cursor.png">
+				</div>
+				<p class="play__start_border play__start_diff ">select difficulty level</p>
+				<p class="play__start_border play__start_select easy">easy</p>
+				<p class="play__start_border play__start_select normal">normal</p>
+				<p class="play__start_border play__start_select hard">hard</p>
+			</div>
+			<div class="play__score">
+				<h2>score</h2>
+				<p class="score">000000</p>
+			</div>
+		</div>
+		<div class="play__gamover play__gamover_hide">GAME OVER</div>
+	</section>
+	<section class="endgame">
+		<img class="endgame__cover" src="assets/endgame-cover.png">
+		<label class="engame__label" for=nickname>enter your name, racer <span class="engame__label2">(max 10 symbols)</span></label>
+		<div class="engame__input">
+			<input type="text" id="nickname"  name="nickname" maxlength="10" autocomplete="off">
+			<span>&nbsp;</span>
+			<p>done</p>
+		</div>
+	</section>
+	<footer>
+		<div class="footer__wrapper">
+			<div class="footer__links">
+				<a href="https://rs.school/js-stage0/"><img src="assets/rsschool.svg" alt="rs-school"></a>
+				<a href="https://github.com/zelenolis"><img src="assets/git.png" alt="github">zelenolis</a>
+			</div>
+			<div class="footer_year">
+				<p>&#169 2023 Speedsters - MIT License</p>
+			</div>
+		</div>
+	</footer>
+</body>
+<script type="text/javascript" src="script.js"></script>
+</html>

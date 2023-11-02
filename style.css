@@ -1,0 +1,524 @@
+@font-face {
+	font-family: unica;
+	src: url("assets/unica.ttf");
+}
+@font-face {
+	font-family: digital;
+	src: url("assets/digital-mono.ttf");
+}
+@font-face {
+	font-family: golos;
+	src: url("assets/golos.ttf");
+}
+
+:root {
+	--white: #FFFFFF;
+	--black: #000000;
+	--yellow: #F8A01B;
+	--orange: #DA8506;
+	--lightblue: #88b5ca;
+	--grayopacity50: #80808050;
+	--red: red;
+}
+
+body {
+	margin: 0;
+	background: var(--yellow);
+}
+
+.main {
+	overflow: hidden;
+	transition: 1s;
+}
+.main__zero {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	flex-direction: column;
+	position: fixed;
+	transition: 1s;
+	width: 0;
+	height: 100%;
+	overflow: hidden;
+	left: 0;
+	top: 0;
+}
+.scores__table {
+	font-family: digital;
+	font-size: 2rem;
+	width: 60vw;
+	margin: 5vh 0;
+}
+.scores__table th {
+	width: 30%;
+}
+.scores__place {
+	text-align: end;
+	padding-right: 12%;
+}
+
+
+.main__first {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	transition: 1s;
+	width: 100%;
+	overflow: hidden;
+	position: fixed;
+}
+.main h1, .main h2 {
+	font-family: unica;
+	font-size: 4vw;
+	text-transform: capitalize;
+	text-align: center;
+	margin-bottom: 10px;
+	color: var(--black);
+}
+.main__cover {
+	height: 60vh;
+}
+.controls {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	column-gap: 5%;
+}
+.main p {
+	padding: 0 2%;
+	font-family: unica;
+	font-size: 3vw;
+	text-transform: capitalize;
+	text-align: center;
+	margin: 20px 0 0 0;
+	color: var(--black);
+}
+
+.start__game {
+	animation: blink 2s linear infinite;
+}
+
+@keyframes blink {
+	50% {color: var(--lightblue);}
+}
+.main p:hover {
+	cursor: pointer;
+	color: var(--orange);
+	background: var(--black);
+}
+.main__second {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	flex-direction: column;
+	position: fixed;
+	transition: 1s;
+	width: 0;
+	height: 100%;
+	overflow: hidden;
+	right: 0;
+	top: 0;
+}
+.main__second .main__choose:hover {
+	cursor: auto;
+	color: var(--black);
+	background: var(--yellow);
+}
+.main__cars {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	column-gap: 5vw;
+	position: relative;
+	height: 35vh;
+}
+.main__second .main__choose {
+	font-family: golos;
+	font-size: 1vw;
+	margin: 0;
+}
+.main__cars img {
+	padding: 10px;
+	width: 50px;
+}
+.main__cars img:hover {
+	cursor: pointer;
+}
+.main__car_choosed {
+	background: var(--orange);
+	box-shadow: 4px 0 var(--black), -4px 0 var(--black), 0 -4px var(--black), 0 4px var(--black), 
+	8px 0 var(--yellow), -8px 0 var(--yellow), 0 -8px var(--yellow), 0 8px var(--yellow), 0 0 0 4px var(--yellow);
+}
+.main__cars .main__car_choosed:hover {
+	cursor: auto;
+}
+
+.main__music {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	height: 25vh;
+	row-gap: 2vh;
+}
+.main__music_wrapper {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	column-gap: 5vw;
+	width: 30vw;
+	position: relative;
+}
+.main__music p {
+	margin: 0;
+}
+.main__music p:hover {
+	cursor: auto;
+	color: var(--black);
+	background: var(--yellow);
+}
+.main__music_check, .main__effects_check {
+	z-index: 5;
+	width: 2vw;
+	height: 2vw;
+	border: 2px solid var(--black);
+	border-radius: 4px;
+}
+.main__music_check:hover, .main__effects_check:hover {
+	cursor: pointer;
+}
+.main__music img {
+	position: absolute;
+	right: -0.6vw;
+	width: 3vw;
+}
+.main__check_hidden {
+	display: none;
+}
+
+.volume {
+	-webkit-appearance: none;
+	width: 25vw;
+	height: 5px;
+	background: var(--orange);
+	outline: none;
+}
+.volume::-webkit-slider-thumb {
+	cursor: pointer;
+	appearance: none;
+	width: 30px;
+	height: 15px;
+	border: 0;
+	background: url('assets/volume.png');
+}
+.volume__input .volume__header {
+	font-family: golos;
+	font-size: 2vh;
+}
+.volume__value {
+	padding-left: 10px;
+	font-family: unica;
+	font-size: 3vh;
+}
+
+.play {
+	position: fixed;
+	bottom: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: var(--yellow);
+	height: 0;
+	width: 100%;
+	transition: 1s;
+	overflow: hidden;
+}
+
+.play__wrapper {
+	width: 1000px;
+	height: 95%;
+	max-height: 740px;
+	background: var(--black);
+	position: relative;
+	overflow: hidden;
+	box-shadow: 4px 0 var(--black), -4px 0 var(--black), 0 -4px var(--black), 0 4px var(--black), 
+	8px 0 var(--yellow), -8px 0 var(--yellow), 0 -8px var(--yellow), 0 8px var(--yellow), 0 0 0 4px var(--yellow);
+	/*
+	box-shadow: 6px 0 black, -6px 0 black, 0 -6px black, 0 6px black;
+	*/
+}
+.play__start {
+	z-index: 2;
+	position: absolute;
+	color: var(--yellow);
+	font-family: unica;
+	font-size: 30px;
+	margin: auto;
+	text-align: center;
+	width: 100%;
+}
+.play__start_hide {
+	display: none;
+}
+.play__start_border {
+	background: var(--black);
+	box-shadow: 4px 0 var(--yellow), -4px 0 var(--yellow), 0 -4px var(--yellow), 0 4px var(--yellow), 
+	8px 0 var(--black), -8px 0 var(--black), 0 -8px var(--black), 0 8px var(--black), 0 0 0 4px var(--black);
+}
+.play__start_info {
+	margin: auto;
+	width: 45%;
+}
+.play__start_info img {
+	width: 100px;
+}
+.play__start_info p {
+	font-size: 3vh;
+}
+.play__start_diff {
+	margin: 5% auto 3% auto;
+	width: 35%;
+}
+.play__start_select {
+	margin: 2% auto 2% auto;
+	width: 20%;
+}
+.play__start_select:hover {
+	cursor: pointer;
+	background: var(--yellow);
+	color: var(--black);
+}
+
+.play__score {
+	z-index: 10;
+	position: absolute;
+	top: 50px;
+	left: 60px;
+	height: 40px;
+	width: 107px;
+	background: var(--black);
+}
+.play__score h2 {
+	font-family: digital;
+	color: var(--black);
+	font-size: 35px;
+	line-height: 40px;
+	position: absolute;
+	top: -65px;
+	left: 15px;
+}
+.play__score p {
+	margin: 0;
+	padding-right: 5px;
+	font-family: digital;
+	font-size: 35px;
+	text-align: right;
+	line-height: 40px;
+	color: var(--white);
+}
+
+.roadline {
+	z-index: 1;
+	position: absolute;
+	left: 49%;
+	width: 0.5%;
+	background: var(--white);
+	height: 35px;
+	border-radius: 1px;
+}
+.roadside__left {
+	float: left;
+	z-index: 1;
+	position: relative;
+	height: 100%;
+	width: 25%;
+	overflow: hidden;
+	border-right: 5px var(--yellow) dashed;
+}
+.roadside__right {
+	float: right;
+	z-index: 1;
+	position: relative;
+	height: 100%;
+	width: 25%;
+	overflow: hidden;
+	border-left: 5px var(--yellow) dashed;
+}
+.roadside__left_1 {
+	position: absolute;
+	left: 0;
+}
+.roadside__left_2 {
+	position: absolute;
+	left: 0;
+}
+.roadside__right_1 {
+	position: absolute;
+	right: 0;
+}
+.roadside__right_2 {
+	position: absolute;
+	right: 0;
+}
+
+.player__car {
+	z-index: 5;
+	position: absolute;
+	width: 50px;
+}
+.enemy__car {
+	z-index: 5;
+	position: absolute;
+	width: 50px;
+}
+
+.play__gamover {
+	z-index: 10;
+	position: absolute;
+	top: 10%;
+	margin: 0;
+	text-align: center;
+	font-family: unica;
+	font-size: 3rem;
+	color: var(--orange);
+	transition: 1s;
+	background: var(--red);
+	padding: 0 2%;
+	animation: blinks 2s linear infinite;
+}
+.play__gamover_hide {
+	opacity: 0;
+}
+
+.endgame {
+	position: fixed;
+	top: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+	background: var(--yellow);
+	height: 0;
+	width: 100%;
+	transition: 1s;
+	overflow: hidden;
+}
+.endgame__cover {
+	width: 60vh;
+}
+.engame__label {
+	font-family: unica;
+	font-size: 5vh;
+	padding-top: 2%;
+	color: var(--black);
+}
+.engame__label2 {
+	display: block;
+	font-family: golos;
+	font-size: 2vh;
+	margin: 0;
+	text-align: center;
+}
+
+.engame__input input {
+	border: none;
+	background: var(--yellow);
+	font-family: unica;
+	font-size: 3vw;
+	width: 0;
+	height: 100%;
+	margin: 0;
+	color: var(--black);
+	text-align: right;
+	caret-color: transparent;
+}
+.engame__input input:focus {
+	border: none;
+	border-style: none;
+	outline: none;
+}
+.engame__input > span {
+	animation: spanblink 1s step-end infinite;
+	border-bottom: 2px solid var(--black);
+	font-size: 4vw;
+}
+@keyframes spanblink {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: var(--black);
+  }
+}
+
+@keyframes blinks {
+	50% {background: var(--black);}
+}
+.black__white {
+	filter: grayscale(90%);
+	transition: 5s;
+}
+.engame__input p {
+	text-align: center;
+	font-size: 3vh;
+	margin: 0;
+	font-family: golos;
+	color: var(--orange);
+}
+.engame__input p:hover {
+	cursor: pointer;
+	color: var(--black);
+}
+
+
+footer {
+	margin: 0;
+	height: 50px;
+	width: 100%;
+	background: var(--yellow);
+	color: var(--black);
+	position: fixed;
+	bottom: 0;
+	transition: 1s;
+	overflow: hidden;
+}
+footer p {
+	padding-top: 5px;
+	margin: 0;
+}
+.footer__links {
+	padding-top: 10px;
+	display: flex;
+	justify-content: center;
+	column-gap: 10px;
+}
+.footer__links img {
+	height: 10px;
+	vertical-align: middle;
+	padding-right: 5px;
+}
+.footer__links a {
+	text-decoration: none;
+	font-family: golos;
+	font-size: 0.8rem;
+	color: var(--black);
+}
+.footer_year {
+	text-align: center;
+	font-family: golos;
+	font-size: 0.8rem;
+}
+
+::-webkit-scrollbar {
+	width: 8px;
+	background: var(--black);
+}
+::-webkit-scrollbar-thumb {
+	background: var(--black);
+	border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+	background: var(--orange);
+}
