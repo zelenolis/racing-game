@@ -2,8 +2,9 @@
 
 ##### deploy link: https://zelenolis.github.io/racing-game/index.html
 ___
-### Screenshot:
-![screenshot](https://github.com/zelenolis/racing-game/blob/main/assets/screenshot.JPG?raw=true)
+### Screenshots:
+![screenshot-1](https://github.com/zelenolis/racing-game/blob/main/assets/screenshot2.jpg?raw=true)  
+![screenshot-2](https://github.com/zelenolis/racing-game/blob/main/assets/screenshot.JPG?raw=true)
 ___
 ### Description
 
