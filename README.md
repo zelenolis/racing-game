@@ -12,4 +12,3 @@ ___
 - The game was written in vanilla JavaScript and uses requestAnimationFrame() for animations.
 - Top scores are saved using local storage.
 - Have fun playing the game!
-- The project was completed as part of learning for RS School.
